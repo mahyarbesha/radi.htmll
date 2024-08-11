@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #852CC4;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            display: none;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #welcome-container {
+            display: flex;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 24px;
+            margin-bottom: 40px;
+        }
+
+        button {
+            padding: 15px 25px;
+            font-size: 24px;
+            color: #800080;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #e0c200;
+        }
+
+        .quiz-button {
+            width: 300px;
+            padding: 15px;
+            font-size: 20px;
+            color: #800080;
+            background-color: #FFD700;
+            border-radius: 15px;
+            margin: 10px;
+            position: relative;
+            animation: glowing 1.5s infinite;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .quiz-button:hover {
+            background-color: #e0c200;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+        @keyframes glowing {
+            0% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); }
+            50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); }
+            100% { box-shadow: 0 0 5px rgba(255, 215, 0, 0.7); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- صفحه اصلی -->
+    <div id="welcome-container" class="container">
+        <h1>سلام رادی! چطوری عشقم؟</h1>
+        <button onclick="goToQuizSelection()">کلیک کن رادی!</button>
+    </div>
+
+    <!-- صفحه انتخاب کوییز -->
+    <div id="quiz-selection-container" class="container">
+        <h2>نامه مخفی مهیار به تو</h2>
+        <a class="quiz-button" href="https://t.me/+-_lU9CTS7PgzNTM0" target="_blank">نامه مخفی مهیار به تو</a>
+        <a class="quiz-button" href="https://t.me/+-_lU9CTS7PgzNTM0" target="_blank">نامه مخفی مهیار به تو</a>
+        <a class="quiz-button" href="https://t.me/+-_lU9CTS7PgzNTM0" target="_blank">نامه مخفی مهیار به تو</a>
+    </div>
+
+    <script>
+        function goToQuizSelection() {
+            document.getElementById('welcome-container').style.display = 'none';
+            document.getElementById('quiz-selection-container').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
